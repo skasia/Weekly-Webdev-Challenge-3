@@ -1,138 +1,262 @@
-.header_fresh-life {
-    background-image: url("../img/banners/img.png");
-    background-size: cover;
-    background-position: center;
-    height: auto;
+.nav {
+    padding: 5rem 0;
 }
 
-.nav {
+.nav_section {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.nav_nav-bar {
     display: flex;
-    flex-flow: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 4rem 0;
-}
-
-.nav_list {
-    display: flex;
-    flex-flow: wrap;
-}
-
-.nav_link {
-    padding: 12px 20px;
-    font-weight: 700;
-    color: #262626;
-    text-transform: uppercase;
 }
 
 .nav_toggle-menu {
     display: none;
 }
 
-.nav_link:hover,
-.nav_link:focus,
-.nav_link_active {
-    position: relative;
+.nav_links {
+    display: flex;
+    align-items: center;
+}
 
-    &:before {
-        content: "";
-        position: absolute;
-        width: 70%;
-        height: 3px;
-        background-color: #ff6033;    
-        top: 0;
-        left: 0;
-        margin: 0 15%;
+.nav_item-link {
+    color:  #787878;
+}
+
+.nav_item-link_active {
+    color:  #60206d;
+}
+
+.nav_list-item {
+    display: flex;
+}
+
+.nav_item-link {
+    padding: 1rem 2.5rem;
+    font-size: 1.8rem;
+}
+
+.nav_logo {
+    background-image: url("../img/icons/logo.png");
+    background-position: center;
+    background-size: contain;
+    width: 65px;
+    height: 65px;
+}
+
+.nav_input {
+    font-size: 1.6rem;
+    @include input($padding: 1.4rem 2.5rem, $width: 200px);
+    border: 0.2rem solid rgba(105, 21, 122, 0.2);
+
+    &:hover,
+    &:focus {
+        border: 0.2rem solid rgba(105, 21, 122, 0.8);    
     }
 }
 
 .banner {
-    max-width: 400px;
-    width: 100%;
-    padding: 20rem 0 25rem;
+    background-image: url("../img/banners/banner.png");
+    background-position: center;
+    background-size: cover;
+    min-height: 50rem;
+    padding: 0 0 9rem;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
-.banner_paragraph {
-    margin-bottom: 3rem;
-    text-align: left;
+.banner_heading {
+    font-size: 10rem;
+    font-family: 'Playfair Display', serif;
+    color: #fff;
 }
 
-.banner_button {
-    @include btn;
-    color: $basicBg;
-    background-color: $btnBg;
-    font-size: 2rem;
-    transition: all 0.25s;
 
-    &:hover,
-    &:focus {
-        box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.5);
+
+.banner_section {
+    position: relative;
+}
+
+.mobile_travel-data {
+    display: none;
+}
+
+.banner_travel-data {
+    position: absolute;
+    width: 80%;
+    margin: 0 10%;
+    height: 15rem;
+    display: flex;
+    background-color: grey;
+    bottom: 0;
+    margin-bottom: -7.5rem;
+    box-shadow: 15px 26px 69.16px 6.84px rgba(4, 4, 4, 0.4);
+    transition: all 0.5s;
+
+    &:hover {
         transform: scale(1.1);
     }
 }
 
-.banner_scroll-down {
+.banner_travel-data_data {
+    padding: 2rem;
+    flex: 9;
+    background-color:  #500e5e;
+    box-shadow: inset 0px 0px 20px rgba(4, 4, 4, 0.4);
     display: flex;
-    justify-content: center;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: space-around;
 }
 
-.banner_scroll-down_active {
-    padding: 2rem 0;
+.banner_travel-data_arrow {
+    flex: 1;
+    background-color:  #69157a; 
+    position: relative;
     cursor: pointer;
+    transition: all 0.25s;
+
+    &:hover {
+        background-color: #fff;
+    }
+
+    &:hover > .arrow_arrow-icon {
+        border-color: #69157a;
+    }
 }
 
-@media only screen and (max-width: 800px) {
-    .nav_list {
-        display: none;
-    }
+.arrow_arrow-icon {
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+    margin-right: -1rem;
+    margin-bottom: -2.5rem;
+    height: 5rem;
+    width: 5rem;
+    border-top: 0.6rem solid white;
+    border-right: 0.6rem solid white;    
+    transform: rotate(45deg);
+}
 
-    .nav {
-        position: relative;
-    }
+.travel-data_input {
+    position: relative;
+    background-color: #500e5e;
+    border: none;
+    border-bottom: 2px solid #fff !important; 
+    z-index: 5;
+    transition: all 0.25s;
+    @include input;
 
-    .header_fresh-life {
-        background-image: none;
-        text-align: center;
+    &:hover,
+    &:focus {
+        border-bottom: 2px solid red;
     }
+}
 
-    .nav_list {
-        flex-direction: column;
+.travel-data_people-amount,
+.travel-data_date {
+    color: #fff;
+    word-spacing: 5px;
+    letter-spacing: 3px;
+}
+
+.travel-data_people-amount {
+    padding: 12px 0;
+}
+
+.travel-data_amount {
+    position: relative;
+
+    &:before {
         position: absolute;
-        right: 0;
-        top: 100px;
-        flex: 1;
+        content: "";
+        height: 0;
+        width: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 12px solid #fff;
+        top: -150%;
+        right: 50%;
+        margin-right: -2.5px;
+        cursor: pointer;
+    }
+
+     &:after {
+        position: absolute;
+        content: "";
+        height: 0;
+        width: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 12px solid #fff;
+        top: 150%;
+        right: 50%;
+        margin-right: -2.5px;
+        cursor: pointer;
+    }
+}
+
+@media only screen and (max-width: 1070px) {
+   .banner_travel-data {
+       display: none;
+   }
+}
+
+@media only screen and (max-width: 767px) {
+    .nav_nav-bar {
+        flex-direction: column;
+    }
+
+    .nav_links {
+        justify-content: space-between;
         width: 100%;
-        background-color: rgb(0, 181, 181);
-        text-align: center;
-        padding: 10px;
     }
 
-
-    .nav_link {
-        font-size: 2rem;
-        padding: 0;
-        color: $basicBg;
-        line-height: 1.6;
-        
-        &:before {
-            display: none;
-        }
-    }
-
-    .nav_list_active {
-        display: block;
+    .nav_menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        position: relative;
     }
 
     .nav_toggle-menu {
         display: block;
     }
 
-    .banner {
-        padding: 10rem 0;
-        max-width: 100%;
-    }
-
-    .banner_paragraph {
+    .nav_list-item {
+        flex-direction: column;
+        position: absolute;
+        z-index: 2;
+        bottom: 0;
+        right: 0;
+        margin-bottom: -17rem;
+        background-color: #fff;
+        padding: 0.5rem 1rem;
+        margin-right: -1rem;
         text-align: center;
+        display: none;
+   }
+
+   .nav_list-item_active {
+       display: block;
+   }
+
+   .nav_item {
+        line-height: 4rem;
+   }
+
+   .nav_item-link {
+       padding: 1rem 0;
+       
+   }
+
+   .nav_search-input {
+        display: none;
     }
 }

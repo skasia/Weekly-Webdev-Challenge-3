@@ -52,16 +52,16 @@ h1 {
 }
 
 h2 {
-	font-size: 9rem;
-	font-weight: 700;
+	font-size: 7rem;
+	font-family: PlayfairDisplay;
+	font-weight: 400;
 	text-align: center;
+	margin-bottom: 3rem;
 }
 
 h3 {
 	font-size: 2rem;
 	font-weight: 400;
-	margin-bottom: 3rem;
-	position: relative;
 }
 
 em {
@@ -100,6 +100,7 @@ button {
 
 p {
 	font-size: 17px;
+	font-family: 'open sans', sans-serif;
 	margin-bottom: 1.5rem;
 	line-height: 1.6;
 	font-weight: 300;
@@ -110,6 +111,12 @@ a {
     text-align: left;
 	text-decoration: none;
 	cursor: pointer;
+}
+
+.main-paragraph {
+	max-width: 80rem;
+	text-align: justify;
+	margin: 0 auto;
 }
 
 @media only screen and (max-width: 800px) {

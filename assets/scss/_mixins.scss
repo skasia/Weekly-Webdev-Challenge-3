@@ -45,17 +45,16 @@ $shadow: #646464;
 	line-height: $line;
 }
 
-@mixin btn($padding: 1.5rem 0px, $color: #fff, $minWidth: 200px, $shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5)) {
+@mixin btn($padding: 1.5rem 0px, $color: #fff, $width: 200px, $shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5)) {
      padding: $padding;
 	 color: $color;
-	 min-width: $minWidth;
+	 width: $width;
 	 box-shadow: $shadow;
 }
 
-@mixin input($padding: 1.4rem 0.5rem, $color: #000, $minWidth: 200px, $width: 400px, $border: 1px solid #555) {
+@mixin input($padding: 1.4rem 0.5rem, $color: #000, $width: 200px, $border: none) {
 	padding: $padding;
 	color: $color;
-	min-width: $minWidth;
 	width: $width;
 	border: $border;
 }
